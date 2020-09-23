@@ -12,7 +12,7 @@
     <artifactId>foodie-dev-mapper</artifactId>
 
     <!--
-        mapper -> pojo -> common
+        com.imooc.my.mapper -> pojo -> common
     -->
     <dependencies>
         <dependency>

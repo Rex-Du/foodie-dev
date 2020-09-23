@@ -12,7 +12,7 @@
     <artifactId>foodie-dev-api</artifactId>
 
     <!--
-        api -> service -> mapper -> pojo -> common
+        api -> service -> com.imooc.my.mapper -> pojo -> common
         api可以使用service/pojo/common中的相应方法
     -->
     <dependencies>
