@@ -1,3 +1,6 @@
-C:\Users\rexdu\IdeaProjects\foodie-dev\foodie-dev-api\src\main\java\com\imooc\Application.java
-C:\Users\rexdu\IdeaProjects\foodie-dev\foodie-dev-api\src\main\java\com\imooc\controller\StuFooController.java
-C:\Users\rexdu\IdeaProjects\foodie-dev\foodie-dev-api\src\main\java\com\imooc\controller\HelloController.java
+/home/rexdu/code/foodie-dev/foodie-dev-api/src/main/java/com/imooc/controller/StuFooController.java
+/home/rexdu/code/foodie-dev/foodie-dev-api/src/main/java/com/imooc/config/Swagger2.java
+/home/rexdu/code/foodie-dev/foodie-dev-api/src/main/java/com/imooc/controller/PassportController.java
+/home/rexdu/code/foodie-dev/foodie-dev-api/src/main/java/com/imooc/config/CorsConfig.java
+/home/rexdu/code/foodie-dev/foodie-dev-api/src/main/java/com/imooc/Application.java
+/home/rexdu/code/foodie-dev/foodie-dev-api/src/main/java/com/imooc/controller/HelloController.java

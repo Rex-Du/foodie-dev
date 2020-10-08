@@ -7,4 +7,6 @@ public interface UserService {
     public boolean isUsernameExist(String name);
 
     public Users createUser(UserBO userBO);
+
+    public Users selectUser(UserBO userBO);
 }

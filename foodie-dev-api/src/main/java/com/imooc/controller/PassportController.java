@@ -3,14 +3,17 @@ package com.imooc.controller;
 import com.imooc.pojo.Users;
 import com.imooc.pojo.bo.UserBO;
 import com.imooc.service.UserService;
-import com.imooc.utils.DateUtil;
+import com.imooc.utils.CookieUtils;
 import com.imooc.utils.IMOOCJSONResult;
+import com.imooc.utils.JsonUtils;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.apache.catalina.User;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 @Api(value = "register and login", tags = {"for register and login"})
 @RestController
@@ -20,12 +23,12 @@ public class PassportController {
     private UserService userService;
 
     @ApiOperation(value = "user register", httpMethod = "GET")
-    @GetMapping("isUsernameExist")
-    public IMOOCJSONResult isUsernameExist(String name) {
-        if (StringUtils.isBlank(name)) {
+    @GetMapping("usernameIsExist")
+    public IMOOCJSONResult isUsernameExist(String username) {
+        if (StringUtils.isBlank(username)) {
             return new IMOOCJSONResult(400, "用户名为空", null);
         }
-        boolean exist = userService.isUsernameExist(name);
+        boolean exist = userService.isUsernameExist(username);
         if (exist) {
             return IMOOCJSONResult.errorMsg("用户名已存在");
         } else {
@@ -35,7 +38,9 @@ public class PassportController {
 
     @ApiOperation(value = "user register", httpMethod = "POST")
     @PostMapping("regist")
-    public IMOOCJSONResult regist(UserBO userBO) {
+    public IMOOCJSONResult regist(@RequestBody UserBO userBO,
+                                  HttpServletRequest request,
+                                  HttpServletResponse response) {
         String username = userBO.getUsername();
         String password = userBO.getPassword();
         String confirmPassword = userBO.getConfirmPassword();
@@ -50,9 +55,41 @@ public class PassportController {
         if (!password.equals(confirmPassword))
             return IMOOCJSONResult.errorMsg("password is not same");
 
-        userService.createUser(userBO);
+        Users user = userService.createUser(userBO);
+        user = setNullProperty(user);
+        CookieUtils.setCookie(request, response, "user",
+                JsonUtils.objectToJson(user), true);
+        return IMOOCJSONResult.ok(user);
 
-        return IMOOCJSONResult.ok();
+    }
 
+    @PostMapping("login")
+    public IMOOCJSONResult login(@RequestBody UserBO userBO,
+                                 HttpServletRequest request,
+                                 HttpServletResponse response) {
+        String username = userBO.getUsername();
+        String password = userBO.getPassword();
+
+        if (StringUtils.isBlank(username) || StringUtils.isBlank(password))
+            return new IMOOCJSONResult(400, "username or password is null", null);
+
+        boolean exist = userService.isUsernameExist(username);
+        if (!exist)
+            return IMOOCJSONResult.errorMsg("用户bu存在");
+        Users user = userService.selectUser(userBO);
+        if (user == null)
+            return IMOOCJSONResult.errorMsg("username or password error");
+        user = setNullProperty(user);
+        CookieUtils.setCookie(request, response, "user",
+                JsonUtils.objectToJson(user), true);
+        return IMOOCJSONResult.ok(user);
+    }
+
+    private Users setNullProperty(Users user) {
+        user.setPassword(null);
+        user.setMobile(null);
+        user.setCreatedTime(null);
+        user.setBirthday(null);
+        return user;
     }
 }

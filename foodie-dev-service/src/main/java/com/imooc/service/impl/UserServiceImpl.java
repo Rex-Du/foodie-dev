@@ -56,4 +56,19 @@ public class UserServiceImpl implements UserService {
         usersMapper.insert(user);
         return user;
     }
+
+    @Override
+    public Users selectUser(UserBO userBO) {
+        Example example = new Example(Users.class);
+        Example.Criteria criteria = example.createCriteria();
+        try {
+            criteria.andEqualTo("username", userBO.getUsername());
+            criteria.andEqualTo("password", MD5Utils.getMD5Str(userBO.getPassword()));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return usersMapper.selectOneByExample(example);
+    }
+
 }
