@@ -28,6 +28,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public boolean isUsernameExist(String name) {
+
         Example example = new Example(Users.class);
         Example.Criteria criteria = example.createCriteria();
         criteria.andEqualTo("username", name);
@@ -59,6 +60,11 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Users selectUser(UserBO userBO) {
+//        try {
+//            Thread.sleep(2500);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
         Example example = new Example(Users.class);
         Example.Criteria criteria = example.createCriteria();
         try {

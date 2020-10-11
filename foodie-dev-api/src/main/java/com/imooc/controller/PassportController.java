@@ -63,6 +63,7 @@ public class PassportController {
 
     }
 
+    @ApiOperation(value = "用户登录", notes = "用户登录", httpMethod = "POST")
     @PostMapping("login")
     public IMOOCJSONResult login(@RequestBody UserBO userBO,
                                  HttpServletRequest request,
@@ -75,7 +76,7 @@ public class PassportController {
 
         boolean exist = userService.isUsernameExist(username);
         if (!exist)
-            return IMOOCJSONResult.errorMsg("用户bu存在");
+            return IMOOCJSONResult.errorMsg("用户不存在");
         Users user = userService.selectUser(userBO);
         if (user == null)
             return IMOOCJSONResult.errorMsg("username or password error");
@@ -83,6 +84,15 @@ public class PassportController {
         CookieUtils.setCookie(request, response, "user",
                 JsonUtils.objectToJson(user), true);
         return IMOOCJSONResult.ok(user);
+    }
+
+    @ApiOperation(value = "退出登录", notes = "退出登录", httpMethod = "POST")
+    @PostMapping("logout")
+    public IMOOCJSONResult logout(HttpServletRequest request, HttpServletResponse response) {
+        CookieUtils.deleteCookie(request, response, "user");
+        // todo 退出登录需要清空购物车
+        // todo 分布式会话中需要清除用户数据
+      return IMOOCJSONResult.ok();
     }
 
     private Users setNullProperty(Users user) {
