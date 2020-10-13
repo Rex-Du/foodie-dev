@@ -2,6 +2,7 @@ package com.imooc.service;
 
 import com.imooc.pojo.Category;
 import com.imooc.pojo.vo.CategoryVO;
+import com.imooc.pojo.vo.NewItemsVO;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -17,4 +18,9 @@ public interface CategoryService {
 
      */
     public List<CategoryVO> getSubCatList(Integer rootCatId);
+
+    /*
+
+     */
+    public List<NewItemsVO> getSixNewItemsLazy(Integer rootCatId);
 }
