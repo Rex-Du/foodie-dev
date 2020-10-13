@@ -1,0 +1,12 @@
+2020-10-10 22:51:09 INFO  ServiceLogAspect:35 - ============= 开始执行 class com.imooc.service.impl.UserServiceImpl.isUsernameExist=============
+2020-10-10 22:51:09 INFO  HikariDataSource:110 - DateSourceHikariCP - Starting...
+2020-10-10 22:51:09 WARN  DriverDataSource:70 - Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-10-10 22:51:09 INFO  HikariDataSource:123 - DateSourceHikariCP - Start completed.
+2020-10-10 22:51:09 WARN  ServiceLogAspect:51 - =========== 执行结束，耗时：218 毫秒 =======
+2020-10-10 22:51:09 INFO  ServiceLogAspect:35 - ============= 开始执行 class com.imooc.service.impl.UserServiceImpl.selectUser=============
+2020-10-10 22:51:12 WARN  ServiceLogAspect:49 - =========== 执行结束，耗时：2510 毫秒 =======
+2020-10-10 22:51:12 INFO  CookieUtils:210 - ========== domainName: localhost ==========
+2020-10-10 22:51:19 WARN  DefaultHandlerExceptionResolver:199 - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2020-10-10 22:51:19 WARN  DefaultHandlerExceptionResolver:199 - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2020-10-10 22:51:20 WARN  DefaultHandlerExceptionResolver:199 - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2020-10-10 22:51:21 WARN  DefaultHandlerExceptionResolver:199 - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]

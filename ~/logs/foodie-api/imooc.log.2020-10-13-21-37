@@ -1,0 +1,27 @@
+2020-10-13 21:37:36 INFO  DispatcherServlet:525 - Initializing Servlet 'dispatcherServlet'
+2020-10-13 21:37:36 INFO  DispatcherServlet:547 - Completed initialization in 5 ms
+2020-10-13 21:37:36 INFO  ServiceLogAspect:35 - ============= 开始执行 class com.imooc.service.impl.CarouserlServiceImpl.queryAll=============
+2020-10-13 21:37:36 INFO  ServiceLogAspect:35 - ============= 开始执行 class com.imooc.service.impl.CategoryServiceImpl.queryRootCats=============
+2020-10-13 21:37:36 INFO  HikariDataSource:110 - DateSourceHikariCP - Starting...
+2020-10-13 21:37:36 WARN  DriverDataSource:70 - Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-10-13 21:37:37 INFO  HikariDataSource:123 - DateSourceHikariCP - Start completed.
+2020-10-13 21:37:37 WARN  ServiceLogAspect:51 - =========== 执行结束，耗时：397 毫秒 =======
+2020-10-13 21:37:37 WARN  ServiceLogAspect:51 - =========== 执行结束，耗时：400 毫秒 =======
+2020-10-13 21:37:41 INFO  ServiceLogAspect:35 - ============= 开始执行 class com.imooc.service.impl.CategoryServiceImpl.getSubCatList=============
+2020-10-13 21:37:41 INFO  ServiceLogAspect:35 - ============= 开始执行 class com.imooc.service.impl.CategoryServiceImpl.getSubCatList=============
+2020-10-13 21:37:41 WARN  ServiceLogAspect:51 - =========== 执行结束，耗时：22 毫秒 =======
+2020-10-13 21:37:41 WARN  ServiceLogAspect:51 - =========== 执行结束，耗时：5 毫秒 =======
+2020-10-13 21:37:41 INFO  ServiceLogAspect:35 - ============= 开始执行 class com.imooc.service.impl.CategoryServiceImpl.getSubCatList=============
+2020-10-13 21:37:41 WARN  ServiceLogAspect:51 - =========== 执行结束，耗时：3 毫秒 =======
+2020-10-13 21:37:41 INFO  ServiceLogAspect:35 - ============= 开始执行 class com.imooc.service.impl.CategoryServiceImpl.getSubCatList=============
+2020-10-13 21:37:41 WARN  ServiceLogAspect:51 - =========== 执行结束，耗时：5 毫秒 =======
+2020-10-13 21:37:41 INFO  ServiceLogAspect:35 - ============= 开始执行 class com.imooc.service.impl.CategoryServiceImpl.getSubCatList=============
+2020-10-13 21:37:41 WARN  ServiceLogAspect:51 - =========== 执行结束，耗时：4 毫秒 =======
+2020-10-13 21:37:41 INFO  ServiceLogAspect:35 - ============= 开始执行 class com.imooc.service.impl.CategoryServiceImpl.getSubCatList=============
+2020-10-13 21:37:41 WARN  ServiceLogAspect:51 - =========== 执行结束，耗时：2 毫秒 =======
+2020-10-13 21:37:41 INFO  ServiceLogAspect:35 - ============= 开始执行 class com.imooc.service.impl.CategoryServiceImpl.getSubCatList=============
+2020-10-13 21:37:41 WARN  ServiceLogAspect:51 - =========== 执行结束，耗时：2 毫秒 =======
+2020-10-13 21:37:41 INFO  ServiceLogAspect:35 - ============= 开始执行 class com.imooc.service.impl.CategoryServiceImpl.getSubCatList=============
+2020-10-13 21:37:41 WARN  ServiceLogAspect:51 - =========== 执行结束，耗时：3 毫秒 =======
+2020-10-13 21:37:41 INFO  ServiceLogAspect:35 - ============= 开始执行 class com.imooc.service.impl.CategoryServiceImpl.getSubCatList=============
+2020-10-13 21:37:41 WARN  ServiceLogAspect:51 - =========== 执行结束，耗时：4 毫秒 =======

@@ -1,0 +1,26 @@
+2020-10-12 22:26:49 INFO  Application:55 - Starting Application on rexdu-ubuntu with PID 6690 (/home/rexdu/code/foodie-dev/foodie-dev-api/target/classes started by rexdu in /home/rexdu/code/foodie-dev)
+2020-10-12 22:26:49 INFO  Application:651 - No active profile set, falling back to default profiles: default
+2020-10-12 22:26:51 WARN  ClassPathMapperScanner:44 - Skipping MapperFactoryBean with name 'stuMapper' and 'com.imooc.mapper.StuMapper' mapperInterface. Bean already defined with the same name!
+2020-10-12 22:26:51 WARN  ClassPathMapperScanner:44 - Skipping MapperFactoryBean with name 'usersMapper' and 'com.imooc.mapper.UsersMapper' mapperInterface. Bean already defined with the same name!
+2020-10-12 22:26:51 WARN  ClassPathMapperScanner:44 - No MyBatis mapper was found in '[com.imooc]' package. Please check your configuration.
+2020-10-12 22:26:52 INFO  TomcatWebServer:108 - Tomcat initialized with port(s): 8088 (http)
+2020-10-12 22:26:52 INFO  ServletWebServerApplicationContext:285 - Root WebApplicationContext: initialization completed in 2545 ms
+2020-10-12 22:26:53 WARN  AnnotationConfigServletWebServerApplicationContext:559 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'indexController': Unsatisfied dependency expressed through field 'categoryService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.imooc.service.CategoryService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-10-12 22:26:53 ERROR LoggingFailureAnalysisReporter:40 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field categoryService in com.imooc.controller.IndexController required a bean of type 'com.imooc.service.CategoryService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.imooc.service.CategoryService' in your configuration.
+

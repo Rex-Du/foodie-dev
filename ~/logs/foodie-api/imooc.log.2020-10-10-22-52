@@ -1,0 +1,56 @@
+2020-10-10 22:52:03 INFO  ThreadPoolTaskExecutor:218 - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-10 22:52:03 INFO  HikariDataSource:350 - DateSourceHikariCP - Shutdown initiated...
+2020-10-10 22:52:03 INFO  HikariDataSource:352 - DateSourceHikariCP - Shutdown completed.
+2020-10-10 22:52:05 INFO  Application:55 - Starting Application on rexdu-ubuntu with PID 4921 (/home/rexdu/code/foodie-dev/foodie-dev-api/target/classes started by rexdu in /home/rexdu/code/foodie-dev)
+2020-10-10 22:52:05 INFO  Application:651 - No active profile set, falling back to default profiles: default
+2020-10-10 22:52:06 WARN  ClassPathMapperScanner:44 - Skipping MapperFactoryBean with name 'stuMapper' and 'com.imooc.mapper.StuMapper' mapperInterface. Bean already defined with the same name!
+2020-10-10 22:52:06 WARN  ClassPathMapperScanner:44 - Skipping MapperFactoryBean with name 'usersMapper' and 'com.imooc.mapper.UsersMapper' mapperInterface. Bean already defined with the same name!
+2020-10-10 22:52:06 WARN  ClassPathMapperScanner:44 - No MyBatis mapper was found in '[com.imooc]' package. Please check your configuration.
+2020-10-10 22:52:06 INFO  TomcatWebServer:108 - Tomcat initialized with port(s): 8088 (http)
+2020-10-10 22:52:06 INFO  ServletWebServerApplicationContext:285 - Root WebApplicationContext: initialization completed in 820 ms
+2020-10-10 22:52:06 INFO  PropertySourcedRequestMappingHandlerMapping:69 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-10-10 22:52:07 INFO  ThreadPoolTaskExecutor:181 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-10 22:52:07 INFO  MapperCacheDisabler:60 - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2020-10-10 22:52:07 INFO  MapperCacheDisabler:60 - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2020-10-10 22:52:07 INFO  MapperCacheDisabler:60 - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2020-10-10 22:52:07 INFO  MapperCacheDisabler:83 - Clear EntityHelper entityTableMap cache.
+2020-10-10 22:52:07 INFO  TomcatWebServer:220 - Tomcat started on port(s): 8088 (http) with context path ''
+2020-10-10 22:52:07 INFO  DocumentationPluginsBootstrapper:160 - Context refreshed
+2020-10-10 22:52:07 INFO  DocumentationPluginsBootstrapper:163 - Found 1 custom documentation plugin(s)
+2020-10-10 22:52:07 INFO  ApiListingReferenceScanner:41 - Scanning for api listing references
+2020-10-10 22:52:07 INFO  Application:61 - Started Application in 2.081 seconds (JVM running for 2.336)
+2020-10-10 22:52:12 INFO  DispatcherServlet:525 - Initializing Servlet 'dispatcherServlet'
+2020-10-10 22:52:12 INFO  DispatcherServlet:547 - Completed initialization in 4 ms
+2020-10-10 22:52:12 INFO  CookieUtils:210 - ========== domainName: localhost ==========
+2020-10-10 22:52:24 INFO  ServiceLogAspect:35 - ============= 开始执行 class com.imooc.service.impl.UserServiceImpl.isUsernameExist=============
+2020-10-10 22:52:24 INFO  HikariDataSource:110 - DateSourceHikariCP - Starting...
+2020-10-10 22:52:24 WARN  DriverDataSource:70 - Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-10-10 22:52:25 INFO  HikariDataSource:123 - DateSourceHikariCP - Start completed.
+2020-10-10 22:52:25 WARN  ServiceLogAspect:51 - =========== 执行结束，耗时：232 毫秒 =======
+2020-10-10 22:52:25 INFO  ServiceLogAspect:35 - ============= 开始执行 class com.imooc.service.impl.UserServiceImpl.selectUser=============
+2020-10-10 22:52:27 WARN  ServiceLogAspect:49 - =========== 执行结束，耗时：2510 毫秒 =======
+2020-10-10 22:52:27 INFO  CookieUtils:210 - ========== domainName: localhost ==========
+2020-10-10 22:52:43 INFO  ThreadPoolTaskExecutor:218 - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-10 22:52:43 INFO  HikariDataSource:350 - DateSourceHikariCP - Shutdown initiated...
+2020-10-10 22:52:43 INFO  HikariDataSource:352 - DateSourceHikariCP - Shutdown completed.
+2020-10-10 22:52:45 INFO  Application:55 - Starting Application on rexdu-ubuntu with PID 5075 (/home/rexdu/code/foodie-dev/foodie-dev-api/target/classes started by rexdu in /home/rexdu/code/foodie-dev)
+2020-10-10 22:52:45 INFO  Application:651 - No active profile set, falling back to default profiles: default
+2020-10-10 22:52:46 WARN  ClassPathMapperScanner:44 - Skipping MapperFactoryBean with name 'stuMapper' and 'com.imooc.mapper.StuMapper' mapperInterface. Bean already defined with the same name!
+2020-10-10 22:52:46 WARN  ClassPathMapperScanner:44 - Skipping MapperFactoryBean with name 'usersMapper' and 'com.imooc.mapper.UsersMapper' mapperInterface. Bean already defined with the same name!
+2020-10-10 22:52:46 WARN  ClassPathMapperScanner:44 - No MyBatis mapper was found in '[com.imooc]' package. Please check your configuration.
+2020-10-10 22:52:46 INFO  TomcatWebServer:108 - Tomcat initialized with port(s): 8088 (http)
+2020-10-10 22:52:46 INFO  ServletWebServerApplicationContext:285 - Root WebApplicationContext: initialization completed in 839 ms
+2020-10-10 22:52:47 INFO  PropertySourcedRequestMappingHandlerMapping:69 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-10-10 22:52:47 INFO  ThreadPoolTaskExecutor:181 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-10 22:52:47 INFO  MapperCacheDisabler:60 - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2020-10-10 22:52:47 INFO  MapperCacheDisabler:60 - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2020-10-10 22:52:47 INFO  MapperCacheDisabler:60 - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2020-10-10 22:52:47 INFO  MapperCacheDisabler:83 - Clear EntityHelper entityTableMap cache.
+2020-10-10 22:52:47 INFO  TomcatWebServer:220 - Tomcat started on port(s): 8088 (http) with context path ''
+2020-10-10 22:52:47 INFO  DocumentationPluginsBootstrapper:160 - Context refreshed
+2020-10-10 22:52:47 INFO  DocumentationPluginsBootstrapper:163 - Found 1 custom documentation plugin(s)
+2020-10-10 22:52:47 INFO  ApiListingReferenceScanner:41 - Scanning for api listing references
+2020-10-10 22:52:47 INFO  Application:61 - Started Application in 2.135 seconds (JVM running for 2.44)
+2020-10-10 22:52:56 INFO  DispatcherServlet:525 - Initializing Servlet 'dispatcherServlet'
+2020-10-10 22:52:56 INFO  DispatcherServlet:547 - Completed initialization in 4 ms
+2020-10-10 22:52:56 INFO  CookieUtils:210 - ========== domainName: localhost ==========

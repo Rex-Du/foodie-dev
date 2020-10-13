@@ -1,0 +1,9 @@
+2020-10-10 22:53:03 INFO  ServiceLogAspect:35 - ============= 开始执行 class com.imooc.service.impl.UserServiceImpl.isUsernameExist=============
+2020-10-10 22:53:03 INFO  HikariDataSource:110 - DateSourceHikariCP - Starting...
+2020-10-10 22:53:03 WARN  DriverDataSource:70 - Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-10-10 22:53:04 INFO  HikariDataSource:123 - DateSourceHikariCP - Start completed.
+2020-10-10 22:53:04 WARN  ServiceLogAspect:51 - =========== 执行结束，耗时：220 毫秒 =======
+2020-10-10 22:53:04 INFO  ServiceLogAspect:35 - ============= 开始执行 class com.imooc.service.impl.UserServiceImpl.selectUser=============
+2020-10-10 22:53:04 WARN  ServiceLogAspect:51 - =========== 执行结束，耗时：4 毫秒 =======
+2020-10-10 22:53:04 INFO  CookieUtils:210 - ========== domainName: localhost ==========
+2020-10-10 22:53:07 INFO  CookieUtils:210 - ========== domainName: localhost ==========

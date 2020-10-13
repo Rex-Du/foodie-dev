@@ -1,0 +1,9 @@
+2020-10-09 22:50:45 INFO  DispatcherServlet:525 - Initializing Servlet 'dispatcherServlet'
+2020-10-09 22:50:45 INFO  DispatcherServlet:547 - Completed initialization in 5 ms
+2020-10-09 22:50:58 INFO  ServiceLogAspect:35 - ============= begin class com.imooc.service.impl.UserServiceImpl.isUsernameExist=============
+2020-10-09 22:50:58 INFO  HikariDataSource:110 - DateSourceHikariCP - Starting...
+2020-10-09 22:50:58 WARN  DriverDataSource:70 - Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-10-09 22:50:58 INFO  HikariDataSource:123 - DateSourceHikariCP - Start completed.
+2020-10-09 22:50:58 WARN  ServiceLogAspect:51 - =========== 执行结束，耗时：316 毫秒 =======
+2020-10-09 22:50:59 INFO  ServiceLogAspect:35 - ============= begin class com.imooc.service.impl.UserServiceImpl.isUsernameExist=============
+2020-10-09 22:50:59 WARN  ServiceLogAspect:51 - =========== 执行结束，耗时：12 毫秒 =======

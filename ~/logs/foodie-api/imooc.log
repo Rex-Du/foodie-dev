@@ -1,0 +1,8 @@
+2020-10-13 21:51:42 INFO  ServiceLogAspect:35 - ============= 开始执行 class com.imooc.service.impl.CarouserlServiceImpl.queryAll=============
+2020-10-13 21:51:42 INFO  ServiceLogAspect:35 - ============= 开始执行 class com.imooc.service.impl.CategoryServiceImpl.queryRootCats=============
+2020-10-13 21:51:42 WARN  ServiceLogAspect:51 - =========== 执行结束，耗时：3 毫秒 =======
+2020-10-13 21:51:42 WARN  ServiceLogAspect:51 - =========== 执行结束，耗时：3 毫秒 =======
+2020-10-13 21:51:45 INFO  ServiceLogAspect:35 - ============= 开始执行 class com.imooc.service.impl.CarouserlServiceImpl.queryAll=============
+2020-10-13 21:51:45 INFO  ServiceLogAspect:35 - ============= 开始执行 class com.imooc.service.impl.CategoryServiceImpl.queryRootCats=============
+2020-10-13 21:51:45 WARN  ServiceLogAspect:51 - =========== 执行结束，耗时：3 毫秒 =======
+2020-10-13 21:51:45 WARN  ServiceLogAspect:51 - =========== 执行结束，耗时：5 毫秒 =======

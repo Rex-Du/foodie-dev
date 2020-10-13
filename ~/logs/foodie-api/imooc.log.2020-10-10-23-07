@@ -1,0 +1,28 @@
+2020-10-10 23:07:21 INFO  Application:55 - Starting Application on rexdu-ubuntu with PID 5916 (/home/rexdu/code/foodie-dev/foodie-dev-api/target/classes started by rexdu in /home/rexdu/code/foodie-dev)
+2020-10-10 23:07:21 INFO  Application:651 - No active profile set, falling back to default profiles: default
+2020-10-10 23:07:22 WARN  ClassPathMapperScanner:44 - Skipping MapperFactoryBean with name 'stuMapper' and 'com.imooc.mapper.StuMapper' mapperInterface. Bean already defined with the same name!
+2020-10-10 23:07:22 WARN  ClassPathMapperScanner:44 - Skipping MapperFactoryBean with name 'usersMapper' and 'com.imooc.mapper.UsersMapper' mapperInterface. Bean already defined with the same name!
+2020-10-10 23:07:22 WARN  ClassPathMapperScanner:44 - No MyBatis mapper was found in '[com.imooc]' package. Please check your configuration.
+2020-10-10 23:07:22 INFO  TomcatWebServer:108 - Tomcat initialized with port(s): 8088 (http)
+2020-10-10 23:07:22 INFO  ServletWebServerApplicationContext:285 - Root WebApplicationContext: initialization completed in 852 ms
+2020-10-10 23:07:23 INFO  PropertySourcedRequestMappingHandlerMapping:69 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-10-10 23:07:23 INFO  ThreadPoolTaskExecutor:181 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-10 23:07:23 INFO  MapperCacheDisabler:60 - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2020-10-10 23:07:23 INFO  MapperCacheDisabler:60 - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2020-10-10 23:07:23 INFO  MapperCacheDisabler:60 - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2020-10-10 23:07:23 INFO  MapperCacheDisabler:83 - Clear EntityHelper entityTableMap cache.
+2020-10-10 23:07:23 INFO  TomcatWebServer:220 - Tomcat started on port(s): 8088 (http) with context path ''
+2020-10-10 23:07:23 INFO  DocumentationPluginsBootstrapper:160 - Context refreshed
+2020-10-10 23:07:23 INFO  DocumentationPluginsBootstrapper:163 - Found 1 custom documentation plugin(s)
+2020-10-10 23:07:23 INFO  ApiListingReferenceScanner:41 - Scanning for api listing references
+2020-10-10 23:07:23 INFO  Application:61 - Started Application in 2.2 seconds (JVM running for 2.506)
+2020-10-10 23:07:50 INFO  DispatcherServlet:525 - Initializing Servlet 'dispatcherServlet'
+2020-10-10 23:07:50 INFO  DispatcherServlet:547 - Completed initialization in 4 ms
+2020-10-10 23:07:50 INFO  ServiceLogAspect:35 - ============= 开始执行 class com.imooc.service.impl.UserServiceImpl.isUsernameExist=============
+2020-10-10 23:07:50 INFO  HikariDataSource:110 - DateSourceHikariCP - Starting...
+2020-10-10 23:07:50 WARN  DriverDataSource:70 - Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-10-10 23:07:50 INFO  HikariDataSource:123 - DateSourceHikariCP - Start completed.
+2020-10-10 23:07:50 WARN  ServiceLogAspect:51 - =========== 执行结束，耗时：239 毫秒 =======
+2020-10-10 23:07:50 INFO  ServiceLogAspect:35 - ============= 开始执行 class com.imooc.service.impl.UserServiceImpl.selectUser=============
+2020-10-10 23:07:50 WARN  ServiceLogAspect:51 - =========== 执行结束，耗时：5 毫秒 =======
+2020-10-10 23:07:50 INFO  CookieUtils:210 - ========== domainName: localhost ==========
