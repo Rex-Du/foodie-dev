@@ -51,10 +51,10 @@
                ii.url         as itemUrl
         from category f
                  left join items i
-                           on f.id = ${paramsMap.rootCatId}
+                           on f.id = i.root_cat_id
                  left join items_img ii
                            on i.id = ii.item_id
-        where f.type = 1 and i.root_cat_id=7
+        where f.type = 1 and i.root_cat_id=${paramsMap.rootCatId} and ii.is_main=1
         order by i.created_time desc
         limit 0,6;
   </select>
