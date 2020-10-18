@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@Api(value = "register and login", tags = {"for register and login"})
+@Api(value = "注册和登陆", tags = {"注册和登陆"})
 @RestController
 @RequestMapping("passport")
 public class PassportController {
@@ -36,7 +36,7 @@ public class PassportController {
         }
     }
 
-    @ApiOperation(value = "user register", httpMethod = "POST")
+    @ApiOperation(value = "用户注册", httpMethod = "POST")
     @PostMapping("regist")
     public IMOOCJSONResult regist(@RequestBody UserBO userBO,
                                   HttpServletRequest request,

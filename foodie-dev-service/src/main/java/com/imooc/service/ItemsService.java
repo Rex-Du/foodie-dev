@@ -1,9 +1,9 @@
 package com.imooc.service;
 
-import com.imooc.pojo.Items;
-import com.imooc.pojo.ItemsImg;
-import com.imooc.pojo.ItemsParam;
-import com.imooc.pojo.ItemsSpec;
+import com.imooc.pojo.*;
+import com.imooc.pojo.vo.ItemCommentCountVO;
+import com.imooc.pojo.vo.ItemCommentVO;
+import com.imooc.utils.PagedGridResult;
 
 import java.util.List;
 
@@ -15,4 +15,8 @@ public interface ItemsService {
     public List<ItemsSpec> queryItemSpecsByItemId(String itemId);
 
     public ItemsParam queryItemParamByItemId(String itemId);
+
+    public ItemCommentCountVO queryItemCommentCount(String itemId);
+
+    public PagedGridResult queryPagedComments(String itemId, Integer level, Integer page, Integer pageSize);
 }
