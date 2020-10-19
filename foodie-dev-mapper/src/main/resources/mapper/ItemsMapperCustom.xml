@@ -10,11 +10,59 @@
         u.nickname as nickname
         from items_comments ic
         left join users u on ic.user_id = u.id
-        where ic.item_id = '${paramsMap.itemId}'
+        where ic.item_id = #{paramsMap.itemId}
         <if test="paramsMap.level!=null and paramsMap.level !=''">
-            and ic.comment_level = ${paramsMap.level}
+            and ic.comment_level = #{paramsMap.level}
         </if>
 
+    </select>
+
+    <select id="searchItemsByName" parameterType="Map" resultType="com.imooc.pojo.vo.SearchItemVO">
+        select i.id        as itemId,
+               i.item_name as itemName,
+               i.sell_counts as sellCounts,
+               ii.url      as imgUrl,
+               tmpSpec.price as price
+        from items i
+                 left join items_img ii on i.id = ii.item_id
+                 left join (select item_id, min(price_discount) as price from items_spec group by item_id) tmpSpec
+                           on i.id = tmpSpec.item_id
+        where ii.is_main = true and i.item_name like '%${paramsMap.itemName}%'
+        <choose>
+            <when test="paramsMap.sort == &quot;c&quot;">
+                order by sellCounts desc
+            </when>
+            <when test="paramsMap.sort == &quot;p&quot;">
+                order by price
+            </when>
+            <otherwise>
+                order by itemName
+            </otherwise>
+        </choose>
+    </select>
+
+    <select id="searchItemsByCatId" parameterType="Map" resultType="com.imooc.pojo.vo.SearchItemVO">
+        select i.id        as itemId,
+        i.item_name as itemName,
+        i.sell_counts as sellCounts,
+        ii.url      as imgUrl,
+        tmpSpec.price as price
+        from items i
+        left join items_img ii on i.id = ii.item_id
+        left join (select item_id, min(price_discount) as price from items_spec group by item_id) tmpSpec
+        on i.id = tmpSpec.item_id
+        where ii.is_main = true and i.cat_id = #{paramsMap.catId}
+        <choose>
+            <when test="paramsMap.sort == &quot;c&quot;">
+                order by sellCounts desc
+            </when>
+            <when test="paramsMap.sort == &quot;p&quot;">
+                order by price
+            </when>
+            <otherwise>
+                order by itemName
+            </otherwise>
+        </choose>
     </select>
 
 </mapper>

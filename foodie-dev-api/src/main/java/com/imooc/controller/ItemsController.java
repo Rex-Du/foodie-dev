@@ -76,4 +76,49 @@ public class ItemsController {
         PagedGridResult pagedGridResult = itemsService.queryPagedComments(itemId, level, page, pageSize);
         return IMOOCJSONResult.ok(pagedGridResult);
     }
+
+    @ApiOperation(value = "搜索商品", notes = "搜索商品", httpMethod = "GET")
+    @GetMapping("search")
+    public IMOOCJSONResult search(@ApiParam(name = "keywords", value = "商品ID", required = true)
+                                    @RequestParam String keywords,
+                                    @ApiParam(name = "sort", value = "分类", required = false)
+                                    @RequestParam String sort,
+                                    @ApiParam(name = "page", value = "第几页", required = false)
+                                    @RequestParam Integer page,
+                                    @ApiParam(name = "pageSize", value = "每页大小", required = false)
+                                    @RequestParam Integer pageSize) {
+        if (StringUtils.isBlank(keywords))
+            return IMOOCJSONResult.errorMsg(null);
+
+        if (page == null)
+            page = 1;
+        if (pageSize == null)
+            pageSize = COMMENT_PAGE_SIZE;
+
+        PagedGridResult pagedGridResult = itemsService.queryItemsByKeywords(keywords, sort, page, pageSize);
+        return IMOOCJSONResult.ok(pagedGridResult);
+    }
+
+    @ApiOperation(value = "按分类搜索商品", notes = "按分类搜索商品", httpMethod = "GET")
+    @GetMapping("catItems")
+    public IMOOCJSONResult catItems(@ApiParam(name = "catId", value = "商品ID", required = true)
+                                  @RequestParam String catId,
+                                  @ApiParam(name = "sort", value = "分类", required = false)
+                                  @RequestParam String sort,
+                                  @ApiParam(name = "page", value = "第几页", required = false)
+                                  @RequestParam Integer page,
+                                  @ApiParam(name = "pageSize", value = "每页大小", required = false)
+                                  @RequestParam Integer pageSize) {
+        if (StringUtils.isBlank(catId))
+            return IMOOCJSONResult.errorMsg(null);
+
+        if (page == null)
+            page = 1;
+
+        if (pageSize == null)
+            pageSize = COMMENT_PAGE_SIZE;
+
+        PagedGridResult pagedGridResult = itemsService.queryItemsByCatId(catId, sort, page, pageSize);
+        return IMOOCJSONResult.ok(pagedGridResult);
+    }
 }
