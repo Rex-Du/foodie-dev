@@ -65,4 +65,22 @@
         </choose>
     </select>
 
+    <select id="queryItemsBySpecIds" parameterType="Map" resultType="com.imooc.pojo.vo.ShopcartItemsVO">
+        select i.id               as itemId,
+           ii.url             as itemImgUrl,
+           i.item_name        as itemName,
+           isp.id             as specId,
+           isp.name           as specName,
+           isp.price_discount as priceDiscount,
+           isp.price_normal   as priceNormal
+        from items_spec isp
+                 left join items i on isp.item_id = i.id
+                 left join items_img ii on i.id = ii.item_id
+        where ii.is_main = 1
+          and isp.id in
+          <foreach collection="itemSpecIds" index="index" item="specId" open="(" separator="," close=")">
+              #{specId}
+          </foreach>
+    </select>
+
 </mapper>

@@ -2,6 +2,7 @@ package com.imooc.mapper;
 
 import com.imooc.pojo.vo.ItemCommentVO;
 import com.imooc.pojo.vo.SearchItemVO;
+import com.imooc.pojo.vo.ShopcartItemsVO;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -13,4 +14,6 @@ public interface ItemsMapperCustom {
     public List<SearchItemVO> searchItemsByName(@Param("paramsMap") Map<String, Object> map);
 
     public List<SearchItemVO> searchItemsByCatId(@Param("paramsMap") Map<String, Object> map);
+
+    public List<ShopcartItemsVO> queryItemsBySpecIds(@Param("itemSpecIds") List<String> itemSpecIds);
 }

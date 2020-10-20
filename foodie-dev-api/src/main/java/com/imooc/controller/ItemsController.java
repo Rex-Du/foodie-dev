@@ -121,4 +121,15 @@ public class ItemsController {
         PagedGridResult pagedGridResult = itemsService.queryItemsByCatId(catId, sort, page, pageSize);
         return IMOOCJSONResult.ok(pagedGridResult);
     }
+
+    @ApiOperation(value = "查询购物车商品", notes = "查询购物车商品", httpMethod = "GET")
+    @GetMapping("refresh")
+    public IMOOCJSONResult refresh(@ApiParam(name = "itemSpecIds", value = "商品详情ID", required = true)
+                                    @RequestParam String itemSpecIds
+                                    ) {
+        if (StringUtils.isBlank(itemSpecIds))
+            return IMOOCJSONResult.errorMsg(null);
+
+        return IMOOCJSONResult.ok(itemsService.queryItemsBySpecIds(itemSpecIds));
+    }
 }

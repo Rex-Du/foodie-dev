@@ -3,6 +3,7 @@ package com.imooc.service;
 import com.imooc.pojo.*;
 import com.imooc.pojo.vo.ItemCommentCountVO;
 import com.imooc.pojo.vo.ItemCommentVO;
+import com.imooc.pojo.vo.ShopcartItemsVO;
 import com.imooc.utils.PagedGridResult;
 
 import java.util.List;
@@ -23,5 +24,7 @@ public interface ItemsService {
     public PagedGridResult queryItemsByKeywords(String itemName, String sort, Integer page, Integer pageSize);
 
     public PagedGridResult queryItemsByCatId(String catId, String sort, Integer page, Integer pageSize);
+
+    public List<ShopcartItemsVO> queryItemsBySpecIds(String specIds);
 
 }
