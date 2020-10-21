@@ -15,4 +15,7 @@ public interface AddressService {
     public void updateAddress(AddressBO addressBO);
 
     public void deleteAddress(String userId, String addressId);
-}
+
+    public UserAddress queryUserAddress(String userId, String addressId);
+
+    }

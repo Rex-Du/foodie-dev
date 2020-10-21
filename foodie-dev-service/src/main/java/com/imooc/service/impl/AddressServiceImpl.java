@@ -1,5 +1,6 @@
 package com.imooc.service.impl;
 
+import com.imooc.enums.YesOrNo;
 import com.imooc.mapper.UserAddressMapper;
 import com.imooc.pojo.UserAddress;
 import com.imooc.pojo.bo.AddressBO;
@@ -44,16 +45,16 @@ public class AddressServiceImpl implements AddressService {
     public void setDefaultAddress(String userId, String addressId) {
         UserAddress userAddress = new UserAddress();
         userAddress.setUserId(userId);
-        userAddress.setIsDefault(1);
+        userAddress.setIsDefault(YesOrNo.YES.type);
 
         List<UserAddress> userAddresses = userAddressMapper.select(userAddress);
         for (UserAddress address : userAddresses) {
-            address.setIsDefault(0);
+            address.setIsDefault(YesOrNo.NO.type);
             userAddressMapper.updateByPrimaryKeySelective(address);
         }
 
         UserAddress address = new UserAddress();
-        address.setIsDefault(1);
+        address.setIsDefault(YesOrNo.YES.type);
         address.setId(addressId);
         userAddressMapper.updateByPrimaryKeySelective(address);
     }
@@ -75,5 +76,14 @@ public class AddressServiceImpl implements AddressService {
         userAddress.setUserId(userId);
 
         userAddressMapper.delete(userAddress);
+    }
+
+    @Override
+    public UserAddress queryUserAddress(String userId, String addressId) {
+        UserAddress userAddress = new UserAddress();
+        userAddress.setUserId(userId);
+        userAddress.setId(addressId);
+
+        return userAddressMapper.selectOne(userAddress);
     }
 }
