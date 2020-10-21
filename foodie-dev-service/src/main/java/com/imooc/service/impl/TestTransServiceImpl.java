@@ -1,7 +1,5 @@
 package com.imooc.service.impl;
 
-import com.fasterxml.jackson.databind.annotation.JsonAppend;
-import com.imooc.pojo.Stu;
 import com.imooc.service.StuService;
 import com.imooc.service.TestTransService;
 import org.springframework.beans.factory.annotation.Autowired;
