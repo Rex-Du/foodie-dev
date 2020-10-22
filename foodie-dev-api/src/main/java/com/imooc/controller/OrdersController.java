@@ -23,9 +23,10 @@ public class OrdersController {
     @PostMapping("create")
     public IMOOCJSONResult create(@RequestBody SubmitOrderBO submitOrderBO) {
         // 1.创建订单
-        orderService.createOrder(submitOrderBO);
+        String orderId = orderService.createOrder(submitOrderBO);
         // 2.创建订单后从购物车中移除已结算的商品
+        // todo 整合redis之后，完善购物车中已结算的商品清除
         // 3.向支付中心发送当前订单，用于保存支付中心的订单数据
-        return IMOOCJSONResult.ok();
+        return IMOOCJSONResult.ok(orderId);
     }
 }
