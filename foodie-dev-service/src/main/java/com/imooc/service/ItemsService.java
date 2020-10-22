@@ -15,6 +15,8 @@ public interface ItemsService {
 
     public List<ItemsSpec> queryItemSpecsByItemId(String itemId);
 
+    public ItemsSpec queryItemSpecBySpecId(String specId);
+
     public ItemsParam queryItemParamByItemId(String itemId);
 
     public ItemCommentCountVO queryItemCommentCount(String itemId);
@@ -26,5 +28,9 @@ public interface ItemsService {
     public PagedGridResult queryItemsByCatId(String catId, String sort, Integer page, Integer pageSize);
 
     public List<ShopcartItemsVO> queryItemsBySpecIds(String specIds);
+
+    public String queryItemMainImgById(String itemId);
+
+    public int decreaseItemSpecStock(String specId, int buyCounts);
 
 }

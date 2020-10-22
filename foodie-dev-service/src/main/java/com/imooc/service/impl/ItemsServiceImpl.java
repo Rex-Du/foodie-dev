@@ -3,6 +3,7 @@ package com.imooc.service.impl;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.imooc.enums.CommentLevel;
+import com.imooc.enums.YesOrNo;
 import com.imooc.mapper.*;
 import com.imooc.pojo.*;
 import com.imooc.pojo.vo.ItemCommentCountVO;
@@ -64,6 +65,13 @@ public class ItemsServiceImpl implements ItemsService {
         criteria.andEqualTo("itemId", itemId);
 
         return itemsSpecMapper.selectByExample(example);
+    }
+
+    @Override
+    public ItemsSpec queryItemSpecBySpecId(String specId) {
+        ItemsSpec itemsSpec = new ItemsSpec();
+        itemsSpec.setId(specId);
+        return itemsSpecMapper.selectOne(itemsSpec);
     }
 
     @Transactional(propagation = Propagation.SUPPORTS)
@@ -133,6 +141,25 @@ public class ItemsServiceImpl implements ItemsService {
     public List<ShopcartItemsVO> queryItemsBySpecIds(String specIds) {
         String[] ids = specIds.split(",");
         return itemsMapperCustom.queryItemsBySpecIds(Arrays.asList(ids));
+    }
+
+    @Override
+    public String queryItemMainImgById(String itemId) {
+        ItemsImg itemsImg = new ItemsImg();
+        itemsImg.setItemId(itemId);
+        itemsImg.setIsMain(YesOrNo.YES.type);
+
+        ItemsImg img = itemsImgMapper.selectOne(itemsImg);
+        return img.getUrl();
+    }
+
+    @Override
+    public int decreaseItemSpecStock(String specId, int buyCounts) {
+        int result = itemsMapperCustom.decreaseItemSpecStock(specId, buyCounts);
+        if(result!=1)
+            throw new RuntimeException("库存不足");
+
+        return result;
     }
 
     private PagedGridResult setterPagedGrid(List<?> list, Integer page) {
